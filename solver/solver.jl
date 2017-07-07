@@ -101,7 +101,7 @@ nums = 1:9
 
 for i in 1:num_rows
 	for j in 1:num_cols
-		sodoku_output[i,j] = (result[i,j,:]' * nums)[1]
+		sodoku_output[i,j] = (slice(result, i, j, :)' * nums)[1]
 	end
 end
 
